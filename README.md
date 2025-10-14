@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 3D Developer Portfolio
 
 A modern, animated 3D developer portfolio built with React, Three.js, TailwindCSS, and motion effects — designed to help you stand out and showcase your skills creatively.
@@ -114,3 +115,13 @@ Let me know!
 
 ## ⭐ Like This Project?
 Star the repo and [subscribe](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA??sub_confirmation=1) to the YouTube channel for more dev content!
+
+---
+
+## About the author
+
+👋 Hey, I’m Alok Kumar Singh — I’m a Full Stack Developer passionate about building meaningful digital products that blend creativity and functionality. I love turning ideas into scalable, interactive, and visually appealing web experiences using technologies like React, Next.js, Node.js, Express, and MongoDB.
+=======
+# portfolio
+👋 Hey, I’m Alok Kumar Singh  I’m a Full Stack Developer passionate about building meaningful digital products that blend creativity and functionality. I love turning ideas into scalable, interactive, and visually appealing web experiences using technologies like React, Next.js, Node.js, Express, and MongoDB.
+>>>>>>> backup-remote-before-overwrite
