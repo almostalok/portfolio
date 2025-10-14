@@ -249,7 +249,7 @@ export const experiences = [
     contents: [
       "Developed key components in the frontend.",
       "Maintained & debugged the whole codebase.",
-      "Researched and found new ways to promote the platform.",
+      "Researched and found new ways to promote the platform.",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
     ],
   },
   {
