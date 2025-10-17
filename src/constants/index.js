@@ -227,7 +227,7 @@ export const mySocials = [
   {
     name: "GitHub",
     href: "https://github.com/almostalok",
-    icon: "/assets/socials/github.svg",
+    icon: "/assets/socials/GitHub.png",
   },
   {
     name: "Linkedin",
