@@ -1,65 +1,134 @@
-<<<<<<< HEAD
-# 🚀 3D Developer Portfolio
+<div align="center">
 
-A modern, animated 3D developer portfolio built with React, Three.js, TailwindCSS, and motion effects — designed to help you stand out and showcase your skills creatively.
+# Alok Kumar Singh — Developer Portfolio
 
-![3d Portfolio Screenshot GitHub](https://github.com/user-attachments/assets/9b0ed20e-074e-4f2a-81d8-20c9da751e9e)
+### Full Stack Developer · UI/UX Enthusiast · Open-Source Contributor
 
----
+[![GitHub](https://img.shields.io/badge/GitHub-almostalok-181717?style=flat&logo=github)](https://github.com/almostalok)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-almostalok-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/almostalok)
+[![Instagram](https://img.shields.io/badge/Instagram-almostalok-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/almostalok/)
 
-## 📚 Table of Contents
-
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Assets](#-assets)
-- [Contact Me](#-contact-me)
-- [Suggestions or Feedback](#-suggestions-or-feedback)
-- [Like This Project?](#-like-this-project)
+</div>
 
 ---
 
-## ✨ Features
+## 👋 About Me
 
-- 🔥 3D visuals powered by **React Three Fiber** and **Drei**
-- ⚡ Smooth transitions and scroll-based animations using **Framer Motion**
-- 🎨 Clean, responsive UI with **TailwindCSS**
-- 💌 Working contact form using **EmailJS**
-- 🧱 Beautiful UI enhancements with **Aceternity UI** and **Magic UI**
-- 🚀 Lightning-fast development with **Vite**
+I'm **Alok Kumar Singh**, a Full Stack Developer passionate about building meaningful digital products that blend creativity and functionality. I love turning ideas into scalable, interactive, and visually compelling web and mobile experiences.
+
+My toolkit spans **React**, **Next.js**, **Node.js**, **Express**, **MongoDB**, **Flutter**, and **Firebase** — and I'm always exploring what's next on the horizon.
 
 ---
 
-## 🛠 Tech Stack
+## ✨ Portfolio Highlights
 
-| Tech              | Description                           |
-|-------------------|---------------------------------------|
-| React             | Front-end JavaScript library          |
-| Vite              | Fast bundler and dev environment      |
-| TailwindCSS       | Utility-first CSS framework           |
-| React Three Fiber | 3D rendering with Three.js in React   |
-| Drei              | Helpers and abstractions for R3F      |
-| Framer Motion     | Animation library for React           |
-| EmailJS           | Form handling and email integration   |
-| Aceternity UI     | Custom UI components                  |
-| Magic UI          | Prebuilt UI elements and design extras|
+This repository contains my **personal developer portfolio** — an immersive, performance-first web experience built with cutting-edge frontend technologies.
+
+- 🌌 **3D visuals** powered by **React Three Fiber** & **Drei** (Three.js)
+- ⚡ **Scroll-based animations** and smooth page transitions via **Framer Motion**
+- 🎨 **Pixel-perfect, responsive UI** crafted with **TailwindCSS**
+- 💌 **Working contact form** integrated with **EmailJS**
+- 🚀 **Lightning-fast builds** with **Vite**
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React 19, Next.js |
+| Build Tool | Vite |
+| Styling | TailwindCSS |
+| 3D Rendering | React Three Fiber, Drei, Three.js |
+| Animations | Framer Motion, GSAP |
+| Backend / BaaS | Node.js, Express, Firebase |
+| Database | MongoDB |
+| Mobile | Flutter |
+| Email | EmailJS |
+| Language | JavaScript / TypeScript |
+
+---
+
+## 🚀 Featured Projects
+
+### 🏥 Hospate
+> An innovative digital health platform simplifying healthcare access, management, and monitoring for patients and hospitals.
+
+- Separate portals for patients and hospitals built with **Next.js** and **Firebase**
+- AI-driven diagnostics, telemedicine, and real-time wearable device integration
+- Appointment scheduling, emergency mode, and secure medical records
+- **Stack:** Next.js · Firebase · TailwindCSS · AI
+
+---
+
+### 🛡️ Devi
+> A women's safety and travel companion app with real-time location sharing, AI risk detection, and SOS features.
+
+- Live tracking, SOS alerts, and fake call/text simulation
+- AI-powered safe route detection and emergency mode with background recording
+- Community alert system and verified safe zones
+- **Stack:** Flutter · Firebase · AI · Google Maps API
+
+---
+
+### 💡 StartupGate
+> An AI-powered platform that generates startup roadmaps, team suggestions, and execution plans from a single idea.
+
+- AI workflow that analyzes input to produce structured startup roadmaps
+- Idea validation, hiring recommendations, and funding guidance modules
+- Multi-project dashboard with real-time progress tracking
+- **Stack:** Next.js · OpenAI API · Firebase · TailwindCSS
+
+---
+
+### 🌐 Grupmate
+> A tech social platform blending Feed, Connect, and Workspace to empower creators, learners, and builders.
+
+- Personalized interest-based feed and domain networking
+- Collaborative workspace with project blueprints, video meets, and a Figma-like design space
+- **Stack:** Next.js · Firebase · TailwindCSS · WebRTC
+
+---
+
+### 💘 Wanna Date Me
+> A playful dating app enabling QR-based profile sharing to connect people in real life.
+
+- QR-based dating profile generator for offline sharing
+- Secure authentication and real-time chat
+- **Stack:** Next.js · Firebase · TailwindCSS · QRCode.js
+
+---
+
+### 🍽️ Apetito
+> A Zomato-inspired food delivery platform with Instagram-like social features for food discovery and sharing.
+
+- Restaurant listings, order tracking, and social food posts with media uploads
+- Payment gateway integration and social feed with likes and comments
+- **Stack:** Node.js · Express · ImageKit · TailwindCSS
+
+---
+
+## 💼 Experience
+
+| Role | Organization | Highlights |
+|---|---|---|
+| Web Development Intern | The Boring Education | Developed frontend components, maintained & debugged the codebase, researched growth strategies |
+| Freelance Full Stack Developer | Self-employed | Built apps for Magic World, Y.M.S., and Velocity Opticals |
 
 ---
 
 ## 📁 Project Structure
 
-```bash
+```
 ├── public/
-│   ├── assets/             # Images, textures, models
-│   ├── models/             # 3D Astronaut model
-│   └── vite.svg
+│   ├── assets/             # Images, textures, logos
+│   └── models/             # 3D Astronaut model
 ├── src/
-│   ├── components/         # Reusable components
-│   ├── constants/          # Reusable datas
-│   ├── sections/           # Portfolio sections (Hero, About, etc.)
-│   ├── App.jsx             # Main app file
-│   ├── index.css           # Tailwind css
+│   ├── components/         # Reusable UI components
+│   ├── constants/          # Static data (projects, socials, experiences)
+│   ├── sections/           # Page sections (Hero, About, Projects, etc.)
+│   ├── App.jsx             # Root component
+│   ├── index.css           # Global / Tailwind styles
 │   └── main.jsx            # Entry point
 ├── tailwind.config.js
 └── vite.config.js
@@ -67,61 +136,40 @@ A modern, animated 3D developer portfolio built with React, Three.js, TailwindCS
 
 ---
 
-## 🚀 Getting Started
-1. Clone the Repository
+## ⚙️ Getting Started
+
 ```bash
-git clone https://github.com/Ali-Sanati/Portfolio.git
-cd Portfolio
-```
-2. Install Dependencies
-```bash
+# 1. Clone the repository
+git clone https://github.com/almostalok/portfolio.git
+cd portfolio
+
+# 2. Install dependencies
 npm install
-```
-3. Run the Development Server
-```bash
+
+# 3. Start the development server
 npm run dev
 ```
-The app will be available at http://localhost:5173.
+
+The app will be available at **http://localhost:5173**.
 
 ---
 
-## 🔗 Assets
-Assets used in the project can be found [here](https://github.com/user-attachments/files/19820923/public.zip)
+## 📬 Connect with Me
+
+| Platform | Link |
+|---|---|
+| 🐙 GitHub | [github.com/almostalok](https://github.com/almostalok) |
+| 💼 LinkedIn | [linkedin.com/in/almostalok](https://www.linkedin.com/in/almostalok) |
+| 📸 Instagram | [instagram.com/almostalok](https://www.instagram.com/almostalok/) |
 
 ---
 
-## 📬 Contact Me
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/ali.sanatidev/reels/) 
-[![Static Badge](https://img.shields.io/badge/Youtube-%23FF0033?style=flat&logo=youtube)](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-sanati/) 
+## ⭐ Show Your Support
+
+If you find this portfolio inspiring or useful, please consider giving it a **star** ⭐ — it means a lot and motivates me to keep building!
 
 ---
 
-## 💡 Suggestions or Feedback?
-Leave a comment on the [YouTube video](https://youtu.be/S9UQItTpwUQ) or open an issue here on GitHub.<br/>
-👉 What should I build next?
-
-- A beautiful Landing Page
-
-- A complete E-commerce site
-
-- A fun App Clone (YouTube, Netflix, etc.)
-
-Or another interactive Portfolio
-
-Let me know!
-
----
-
-## ⭐ Like This Project?
-Star the repo and [subscribe](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA??sub_confirmation=1) to the YouTube channel for more dev content!
-
----
-
-## About the author
-
-👋 Hey, I’m Alok Kumar Singh — I’m a Full Stack Developer passionate about building meaningful digital products that blend creativity and functionality. I love turning ideas into scalable, interactive, and visually appealing web experiences using technologies like React, Next.js, Node.js, Express, and MongoDB.
-=======
-# portfolio
-👋 Hey, I’m Alok Kumar Singh  I’m a Full Stack Developer passionate about building meaningful digital products that blend creativity and functionality. I love turning ideas into scalable, interactive, and visually appealing web experiences using technologies like React, Next.js, Node.js, Express, and MongoDB.
->>>>>>> backup-remote-before-overwrite
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/almostalok">Alok Kumar Singh</a></sub>
+</div>
