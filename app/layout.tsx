@@ -35,10 +35,12 @@ export const metadata: Metadata = {
   description: "Interactive editorial portfolio for Alok. Developer, builder, organizer, and experimenter turning ideas into live products.",
   keywords: ["Alok", "Developer", "Portfolio", "Next.js", "Fullstack", "Hospate", "UnHack", "Grupmate", "Software Engineer"],
   authors: [{ name: "Alok" }],
-  openGraph: {
-    title: "Alok — Developer & Builder",
-    description: "I build products, break things, organize people & occasionally ship something useful.",
-    type: "website",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png" }],
   },
 };
 
