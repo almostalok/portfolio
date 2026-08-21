@@ -20,7 +20,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative w-full pt-28 md:pt-36 pb-10 overflow-hidden">
+    <section className="relative w-full pt-28 md:pt-36 pb-8 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline & Copy */}
@@ -142,6 +142,7 @@ export function HeroSection() {
                   alt="experimenting"
                   width={140}
                   height={60}
+                  unoptimized
                   className="w-24 sm:w-28 h-auto object-contain -rotate-6"
                 />
               </motion.div>
@@ -158,6 +159,7 @@ export function HeroSection() {
                   alt="building"
                   width={120}
                   height={50}
+                  unoptimized
                   className="w-20 sm:w-24 h-auto object-contain"
                 />
                 <Image
@@ -165,6 +167,7 @@ export function HeroSection() {
                   alt="shipping"
                   width={100}
                   height={45}
+                  unoptimized
                   className="w-16 sm:w-20 h-auto object-contain pl-3"
                 />
                 <Image
@@ -172,6 +175,7 @@ export function HeroSection() {
                   alt="organizing"
                   width={110}
                   height={45}
+                  unoptimized
                   className="w-18 sm:w-22 h-auto object-contain pl-3"
                 />
                 <Image
@@ -179,6 +183,7 @@ export function HeroSection() {
                   alt="probably debugging"
                   width={130}
                   height={50}
+                  unoptimized
                   className="w-22 sm:w-28 h-auto object-contain pl-3"
                 />
               </motion.div>

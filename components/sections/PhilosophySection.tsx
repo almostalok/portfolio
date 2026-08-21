@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
-import { ArrowDoodle } from "../illustrations/IllustrationSystem";
+import { LaptopPerson, GroupPeople, FlaskIllustration, ArrowDoodle } from "../illustrations/IllustrationSystem";
 import { HandUnderline } from "../ui/HandUnderline";
 
 export function PhilosophySection() {
@@ -15,43 +15,19 @@ export function PhilosophySection() {
       key: "build",
       title: philosophy.build.title,
       description: philosophy.build.description,
-      illustration: (
-        <Image
-          src="/assets/alok_desk_laptop.png"
-          alt="Build"
-          width={180}
-          height={140}
-          className="w-28 h-auto object-contain max-h-24"
-        />
-      ),
+      illustration: <LaptopPerson className="w-24 h-24 text-[#111318]" />,
     },
     {
       key: "organize",
       title: philosophy.organize.title,
       description: philosophy.organize.description,
-      illustration: (
-        <Image
-          src="/assets/alok_standing_glow.png"
-          alt="Organize"
-          width={160}
-          height={180}
-          className="w-20 h-auto object-contain max-h-24"
-        />
-      ),
+      illustration: <GroupPeople className="w-28 h-24 text-[#111318]" />,
     },
     {
       key: "experiment",
       title: philosophy.experiment.title,
       description: philosophy.experiment.description,
-      illustration: (
-        <Image
-          src="/assets/alok_thinking_coffee.png"
-          alt="Experiment"
-          width={170}
-          height={160}
-          className="w-24 h-auto object-contain max-h-24"
-        />
-      ),
+      illustration: <FlaskIllustration className="w-24 h-24 text-[#111318]" />,
     },
   ];
 
