@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionDivider } from "@/components/layout/SectionDivider";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { PageShell } from "@/components/layout/PageShell";
 
 import { HeroSection } from "@/components/sections/HeroSection";
 import { QuickStats } from "@/components/sections/QuickStats";
@@ -22,6 +23,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
+    <PageShell>
     <main className="min-h-screen bg-[#FFFFFF] text-[#111318] flex flex-col selection:bg-[#F4C400] selection:text-[#111318]">
       {/* Desktop Contextual Cursor */}
       <CustomCursor />
@@ -95,5 +97,6 @@ export default function Home() {
       {/* 17 FOOTER */}
       <Footer />
     </main>
+    </PageShell>
   );
 }
