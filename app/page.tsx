@@ -6,6 +6,7 @@ import { CustomCursor } from "@/components/ui/CustomCursor";
 
 import { HeroSection } from "@/components/sections/HeroSection";
 import { QuickStats } from "@/components/sections/QuickStats";
+import { IntroSection } from "@/components/sections/IntroSection";
 import { PhilosophySection } from "@/components/sections/PhilosophySection";
 import { FeaturedProducts } from "@/components/sections/FeaturedProducts";
 import { ProductAnatomy } from "@/components/sections/ProductAnatomy";
@@ -33,6 +34,9 @@ export default function Home() {
 
       {/* Landscape Motif Divider */}
       <SectionDivider variant="trees-birds" />
+
+      {/* INTRO — Dynamic Status & Typewriter */}
+      <IntroSection />
 
       {/* 02 QUICK STATS */}
       <QuickStats />
