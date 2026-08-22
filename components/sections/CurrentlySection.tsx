@@ -1,13 +1,29 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Zap, Coffee, TerminalSquare } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { BrokenTerminal } from "../illustrations/IllustrationSystem";
 
+const VIBE_LABELS = [
+  "CURRENTLY",
+  "VIBE CHECK",
+  "LIVE STATUS",
+  "RIGHT NOW",
+  "REAL-TIME ALOK",
+];
+
 export function CurrentlySection() {
   const { currently, failedExperiments } = portfolioData;
+  const [vibeIndex, setVibeIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVibeIndex((prev) => (prev + 1) % VIBE_LABELS.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="w-full max-w-6xl mx-auto px-4 md:px-8 py-14">
@@ -16,9 +32,9 @@ export function CurrentlySection() {
         <div className="lg:col-span-7 bg-white border border-[#D9D9D4] rounded-2xl p-6 md:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:border-[#111318] transition-colors flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] animate-pulse" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] animate-pulse-dot" />
               <span className="text-xs font-mono font-bold tracking-widest text-[#111318] uppercase">
-                CURRENTLY
+                {VIBE_LABELS[vibeIndex]}
               </span>
             </div>
 

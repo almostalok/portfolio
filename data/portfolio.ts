@@ -148,6 +148,8 @@ export interface PortfolioData {
     stats: { value: string | number; label: string }[];
     humorNote: string;
   };
+  easterEggs: string[];
+  scrollQuips: string[];
   statement: {
     quote: string;
     highlight1: string;
@@ -159,11 +161,11 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Alok",
     greeting: "HEY!",
-    headline: "I build products, break things, organize people & occasionally ship something useful.",
+    headline: "I build products, break things, organize people & occasionally ship something useful (emphasis on occasionally).",
     roles: ["Developer", "Builder", "Organizer", "Experimenter"],
-    bio: "Passionate engineer and community organizer focused on turning messy problems into intuitive digital experiences.",
+    bio: "Passionate engineer and community organizer focused on turning messy problems into intuitive digital experiences. Fueled by an unhealthy amount of coffee.",
     location: "Somewhere in India",
-    status: "Probably shipping",
+    status: "Probably shipping (or napping)",
     fuel: "Coffee + curiosity",
     email: "alok@alok.build",
   },
@@ -178,15 +180,15 @@ export const portfolioData: PortfolioData = {
   philosophy: {
     build: {
       title: "BUILD.",
-      description: "I build digital products that solve real problems (or at least try to).",
+      description: "I build digital products that solve real problems (or at least try to). Most survive past v0.1.",
     },
     organize: {
       title: "ORGANIZE.",
-      description: "I create spaces and opportunities for people to learn, build & grow.",
+      description: "I create spaces for people to learn, build & grow. Yes, I voluntarily manage spreadsheets.",
     },
     experiment: {
       title: "EXPERIMENT.",
-      description: "I prototype crazy ideas and learn by shipping (and breaking things).",
+      description: "I prototype crazy ideas at 2am and learn by shipping (and breaking everything in prod).",
     },
   },
   products: [
@@ -195,7 +197,7 @@ export const portfolioData: PortfolioData = {
       number: "01",
       title: "Hospate",
       subtitle: "Healthcare infrastructure",
-      description: "Making medical records less painful than they currently are.",
+      description: "Making medical records less painful than an actual hospital visit.",
       tags: ["Next.js", "NestJS", "PostgreSQL", "Redis", "TailwindCSS"],
       caseStudyUrl: "#hospate",
       liveUrl: "https://hospate.demo",
@@ -207,7 +209,7 @@ export const portfolioData: PortfolioData = {
       number: "02",
       title: "UnHack",
       subtitle: "Transparent hackathons",
-      description: "Hackathons shouldn't feel like judging roulette.",
+      description: "Hackathons shouldn't feel like judging roulette. So I fixed that. You're welcome.",
       tags: ["Next.js", "Node.js", "Socket.io", "Redis", "PostgreSQL"],
       caseStudyUrl: "#unhack",
       liveUrl: "https://unhack.demo",
@@ -219,7 +221,7 @@ export const portfolioData: PortfolioData = {
       number: "03",
       title: "Grupmate",
       subtitle: "Virtual co-study",
-      description: "Study together without pretending you're actually studying.",
+      description: "Study together without pretending you're actually studying. (We know you're on YouTube.)",
       tags: ["Next.js", "WebRTC", "Prisma", "TailwindCSS"],
       caseStudyUrl: "#grupmate",
       liveUrl: "https://grupmate.demo",
@@ -543,7 +545,7 @@ export const portfolioData: PortfolioData = {
       id: "redis-regret",
       number: "01",
       title: "Why Redis exists in my project (and why I regret adding it)",
-      category: "Engineering",
+      category: "Engineering (Pain)",
       readTime: "8 min read",
       date: "Feb 2026",
       slug: "why-redis-exists",
@@ -553,7 +555,7 @@ export const portfolioData: PortfolioData = {
       id: "built-too-early",
       number: "02",
       title: "I built a thing before figuring out if anyone wanted it",
-      category: "Building",
+      category: "Building (Delusional Optimism)",
       readTime: "6 min read",
       date: "Jan 2026",
       slug: "built-before-validated",
@@ -563,7 +565,7 @@ export const portfolioData: PortfolioData = {
       id: "nextjs-break",
       number: "03",
       title: "Next.js didn't break. I did.",
-      category: "Engineering",
+      category: "Engineering (Cope)",
       readTime: "11 min read",
       date: "Dec 2025",
       slug: "nextjs-didnt-break",
@@ -584,7 +586,7 @@ export const portfolioData: PortfolioData = {
     {
       platform: "LinkedIn",
       handle: "alok-singh",
-      description: "Sharing learnings and building in public.",
+      description: "Sharing learnings & humble-bragging in public.",
       url: "https://linkedin.com",
       icon: "linkedin",
       tapeColor: "#F4C400",
@@ -592,7 +594,7 @@ export const portfolioData: PortfolioData = {
     {
       platform: "GitHub",
       handle: "alok-singh",
-      description: "Code, commits & open source.",
+      description: "Code, commits & 3am debugging sessions.",
       url: "https://github.com",
       icon: "github",
       tapeColor: "#111318",
@@ -600,7 +602,7 @@ export const portfolioData: PortfolioData = {
     {
       platform: "X / Twitter",
       handle: "@alok_builds",
-      description: "Random thoughts in 280 chars.",
+      description: "Random thoughts in 280 chars. Mostly shower ideas.",
       url: "https://x.com",
       icon: "twitter",
       tapeColor: "#F4C400",
@@ -608,7 +610,7 @@ export const portfolioData: PortfolioData = {
     {
       platform: "Instagram",
       handle: "@alok.creates",
-      description: "Photos, life & everything in between.",
+      description: "Photos, coffee pics & pretending to have a social life.",
       url: "https://instagram.com",
       icon: "instagram",
       tapeColor: "#686868",
@@ -681,11 +683,31 @@ export const portfolioData: PortfolioData = {
       { value: 11, label: "rewrites" },
       { value: "∞", label: '"let\'s just refactor this"' },
     ],
-    humorNote: "Failure is just shipping with unexpected telemetry.",
+    humorNote: "Failure is just shipping with unexpected telemetry. Every bug is a feature I haven't documented yet.",
   },
   statement: {
     quote: '“ I like turning "what if?" into "it\'s live." ”',
     highlight1: '"what if?"',
     highlight2: '"it\'s live."',
   },
+  easterEggs: [
+    "You found the source code. Respect.",
+    "No, I don't mass-apply. I mass-build.",
+    "This portfolio has more features than my actual products.",
+    "If you're a recruiter, I promise I'm normal in meetings.",
+    "Built in one sitting. (That's a lie.)",
+    "Yes, I made the cursor custom. I have priorities.",
+  ],
+  scrollQuips: [
+    "still reading? nice.",
+    "you're past the fold 🎉",
+    "hire me maybe?",
+    "this took way too long to build",
+    "← I drew those birds myself",
+    "no AI was harmed... just exhausted",
+    "you scroll, I ship",
+    "almost at the bottom!",
+    "fun fact: this dot is #F4C400",
+    "coffee count: ████░ 80%",
+  ],
 };

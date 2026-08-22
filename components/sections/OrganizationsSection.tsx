@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Target, Flag, Trophy, Presentation } from "lucide-react";
 import { portfolioData, OrganizationItem } from "@/data/portfolio";
@@ -61,10 +62,12 @@ export function OrganizationsSection() {
 
         <div className="flex items-center gap-3">
           <div className="hidden sm:block">
-            <img
-              src="/assets/alok_fistpump_win.png"
+            <Image
+              src="/assets/generated/alok_fistpump_win.jpg"
               alt="Celebration"
-              className="h-16 w-auto object-contain"
+              width={80}
+              height={80}
+              className="h-16 w-16 object-contain mix-blend-multiply"
             />
           </div>
           <a

@@ -1,10 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { Bird } from "../illustrations/IllustrationSystem";
 
+const FOOTER_QUIPS = [
+  "Built with curiosity, coffee & questionable decisions.",
+  "Powered by ctrl+z and blind optimism.",
+  "No divs were harmed in the making of this site.",
+  "Made with 🖤 and an unreasonable amount of CSS.",
+  "Runs on caffeine, deploys on vibes.",
+  "git commit -m 'it works on my machine'",
+];
+
 export function Footer() {
+  const [quipIndex, setQuipIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setQuipIndex((prev) => (prev + 1) % FOOTER_QUIPS.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -13,12 +31,10 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative w-full border-t border-[#D9D9D4] bg-[#FFFFFF] py-12 overflow-hidden select-none">
-      {/* Flying bird that crosses periodically */}
-      <div className="absolute top-4 left-0 w-full pointer-events-none overflow-hidden h-10">
-        <div className="absolute animate-[flyAcross_22s_linear_infinite] flex items-center gap-1 text-[#111318]">
-          <Bird className="w-5 h-4" yellowStroke />
-        </div>
+    <footer className="relative w-full border-t border-[#D9D9D4] bg-[#FFFFFF] py-10 select-none">
+      {/* Hand-drawn little bird perched gracefully on top border (far right) */}
+      <div className="absolute -top-4 right-12 hidden md:flex items-center gap-1 text-[#111318] pointer-events-none">
+        <Bird className="w-5 h-4" yellowStroke />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
@@ -30,14 +46,11 @@ export function Footer() {
           <span className="text-[#F4C400] text-3xl font-black leading-none">.</span>
         </div>
 
-        {/* Center Humor / Philosophy Note */}
-        <div className="flex flex-col items-center gap-1.5">
-          <p className="text-xs md:text-sm text-[#686868] font-mono">
-            Built with curiosity, coffee &amp; questionable decisions.
+        {/* Center Rotating Humor / Philosophy Note */}
+        <div className="flex items-center justify-center">
+          <p className="text-xs md:text-sm text-[#686868] font-mono transition-opacity duration-300">
+            {FOOTER_QUIPS[quipIndex]}
           </p>
-          <div className="w-6 h-5 text-[#111318] -scale-x-100">
-            <Bird className="w-5 h-4" />
-          </div>
         </div>
 
         {/* Right copyright & Back-to-top */}
@@ -49,26 +62,12 @@ export function Footer() {
             onClick={scrollToTop}
             aria-label="Back to top"
             data-cursor="TOP"
-            className="w-8 h-8 rounded-full border border-[#D9D9D4] flex items-center justify-center text-[#111318] hover:bg-[#F4C400] hover:border-[#111318] transition-all duration-200 shadow-sm active:scale-95"
+            className="w-9 h-9 rounded-full border-2 border-[#111318] flex items-center justify-center text-[#111318] hover:bg-[#F4C400] transition-all duration-200 shadow-[2px_2px_0px_#111318] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
           >
             <ArrowUp className="w-4 h-4" />
           </button>
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes flyAcross {
-          0% {
-            transform: translateX(-60px) translateY(4px);
-          }
-          50% {
-            transform: translateX(50vw) translateY(-4px);
-          }
-          100% {
-            transform: translateX(105vw) translateY(4px);
-          }
-        }
-      `}</style>
     </footer>
   );
 }

@@ -95,13 +95,28 @@ export function FeaturedProducts() {
             >
               {/* Card Header: Number Badge & Category */}
               <div>
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center justify-between mb-3 relative">
                   <span className="px-2 py-0.5 rounded bg-[#FFF7D1] border border-[#F4C400] text-[#111318] font-mono font-bold text-xs">
                     {product.number}
                   </span>
                   <span className="text-[11px] font-mono text-[#686868]">
                     {product.subtitle}
                   </span>
+
+                  {/* Hover sticky note */}
+                  {isHovered && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -4, rotate: -2 }}
+                      animate={{ opacity: 1, y: 0, rotate: -2 }}
+                      className="absolute -top-8 right-0 px-2.5 py-1 bg-white border border-[#111318] rounded-md shadow-[2px_2px_0px_#111318] pointer-events-none z-10"
+                    >
+                      {/* Mini tape */}
+                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-6 h-2 bg-[#F4C400] rounded-2xs -rotate-2" />
+                      <span className="text-[11px] font-hand font-bold text-[#111318] whitespace-nowrap block">
+                        {product.id === "hospate" ? "★ actually shipped!" : product.id === "unhack" ? "⚡ anti-corruption mode" : "☕ co-study vibes"}
+                      </span>
+                    </motion.div>
+                  )}
                 </div>
 
                 {/* Title */}

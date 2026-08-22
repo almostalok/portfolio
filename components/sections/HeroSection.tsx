@@ -7,7 +7,6 @@ import { ArrowRight, ArrowDown } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { SpeechBubble } from "../ui/SpeechBubble";
 import { HandUnderline } from "../ui/HandUnderline";
-import { Bird, Tree } from "../illustrations/IllustrationSystem";
 
 export function HeroSection() {
   const { personal } = portfolioData;
@@ -117,7 +116,7 @@ export function HeroSection() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="relative w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 rounded-full overflow-hidden flex items-end justify-center bg-white shadow-inner"
+                className="relative w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 rounded-full overflow-hidden flex items-end justify-center bg-white shadow-inner border-2 border-[#111318]"
               >
                 <Image
                   src="/avatar.png"
@@ -126,19 +125,57 @@ export function HeroSection() {
                   height={400}
                   priority
                   unoptimized
-                  className="w-full h-full object-cover object-top grayscale contrast-105"
+                  className="w-full h-full object-cover object-top grayscale contrast-110"
                 />
               </motion.div>
 
+              {/* Hand-drawn dashed ring accent */}
+              <svg
+                className="absolute inset-0 w-full h-full pointer-events-none -rotate-6 scale-105"
+                viewBox="0 0 100 100"
+                fill="none"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="46"
+                  stroke="#F4C400"
+                  strokeWidth="1.2"
+                  strokeDasharray="4 4"
+                />
+              </svg>
 
+              {/* Designer Status Note Badge Anchored Under the Avatar Image */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-20"
+              >
+                <div className="relative px-4 py-2 bg-white border-2 border-[#111318] rounded-xl shadow-[3px_3px_0px_#111318] flex items-center gap-2.5 whitespace-nowrap -rotate-1 hover:rotate-0 transition-transform duration-200 cursor-default">
+                  {/* Yellow Washi Tape Sticker on Top */}
+                  <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-10 h-3.5 bg-[#F4C400] border border-[#111318]/20 shadow-xs -rotate-2" />
 
-              {/* Bottom Left: Little Tree & Grass Doodle */}
-              <div className="absolute -bottom-4 -left-4 flex items-end gap-1 pointer-events-none">
-                <Tree className="w-7 h-9 text-[#111318]" />
-              </div>
+                  {/* Live Pulse Indicator */}
+                  <div className="flex items-center gap-1.5 pr-2 border-r border-[#EFEFEA]">
+                    <span className="w-2 h-2 rounded-full bg-[#27C93F] animate-pulse-dot" />
+                    <span className="text-[10px] font-mono font-bold tracking-wider text-[#111318] uppercase">
+                      ACTIVE
+                    </span>
+                  </div>
+
+                  {/* Designer Text Note */}
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-hand font-bold text-sm sm:text-base text-[#111318]">
+                      shipping experiments daily
+                    </span>
+                    <span className="text-xs">⚡</span>
+                  </div>
+                </div>
+              </motion.div>
 
               {/* Bottom Right: Little Star / Sparkle Doodle */}
-              <div className="absolute -bottom-2 -right-2 text-[#F4C400] pointer-events-none animate-spin-slow">
+              <div className="absolute -bottom-2 -right-4 text-[#F4C400] pointer-events-none animate-spin-slow">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0L14 9L23 12L14 15L12 24L10 15L1 12L10 9L12 0Z" />
                 </svg>

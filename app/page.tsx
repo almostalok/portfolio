@@ -3,6 +3,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionDivider } from "@/components/layout/SectionDivider";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { FloatingAnnotations } from "@/components/ui/FloatingAnnotations";
+import { EasterEgg } from "@/components/ui/EasterEgg";
 import { PageShell } from "@/components/layout/PageShell";
 
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -27,6 +29,12 @@ export default function Home() {
     <main className="min-h-screen bg-[#FFFFFF] text-[#111318] flex flex-col selection:bg-[#F4C400] selection:text-[#111318]">
       {/* Desktop Contextual Cursor */}
       <CustomCursor />
+
+      {/* Scroll-reactive floating annotations */}
+      <FloatingAnnotations />
+
+      {/* Hidden Konami code easter egg */}
+      <EasterEgg />
 
       {/* Sticky Header Navbar */}
       <Navbar />

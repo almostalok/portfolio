@@ -605,3 +605,118 @@ export function BrokenTerminal({ className = "w-20 h-20", ...props }: SvgProps) 
     </svg>
   );
 }
+
+export function FistpumpCelebration({ className = "w-20 h-20", ...props }: SvgProps) {
+  return (
+    <svg
+      viewBox="0 0 80 80"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      {...props}
+    >
+      {/* Winner Trophy on left */}
+      <path
+        d="M14 32C14 26 19 22 25 22H29V36C29 42 24 46 19 46H14V32Z"
+        fill="#FFF7D1"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M22 22H36V36C36 43 30 48 23 48V56H15M31 56H15"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path d="M18 30H26" stroke="#F4C400" strokeWidth="1.8" strokeLinecap="round" />
+
+      {/* Developer celebrating with raised fist */}
+      <circle cx="52" cy="24" r="10" fill="#FFFFFF" stroke="currentColor" strokeWidth="2" />
+      <path d="M44 20C47 14 55 14 60 18" fill="#111318" />
+      
+      {/* Torso */}
+      <path
+        d="M42 44C42 36 48 36 52 36C56 36 62 36 62 44L64 68H40L42 44Z"
+        fill="#FFFFFF"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      {/* Yellow hoodie detail */}
+      <path d="M50 38V46M54 38V47" stroke="#F4C400" strokeWidth="1.8" strokeLinecap="round" />
+
+      {/* Right arm raised high in fistpump */}
+      <path
+        d="M58 40L68 26L70 14"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Fist */}
+      <circle cx="70" cy="12" r="4" fill="#F4C400" stroke="currentColor" strokeWidth="1.8" />
+
+      {/* Left arm */}
+      <path
+        d="M44 42L36 50L30 46"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      {/* Sparkles / Confetti bursts */}
+      <path d="M68 6L70 2L72 6L76 8L72 10L70 14L68 10L64 8L68 6Z" fill="#F4C400" />
+      <path d="M38 12L40 9L42 12L45 13L42 14L40 17L38 14L35 13L38 12Z" fill="#111318" />
+      <circle cx="28" cy="14" r="1.5" fill="#F4C400" />
+      <circle cx="74" cy="24" r="1.5" fill="#F4C400" />
+
+      {/* Ground line */}
+      <path d="M8 70H72" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function DualMonitorsBattlestation({ className = "w-36 h-20", ...props }: SvgProps) {
+  return (
+    <svg
+      viewBox="0 0 140 80"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      {...props}
+    >
+      {/* Desk Base */}
+      <path d="M6 72H134" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+
+      {/* Monitor 1 (Left - Code editor) */}
+      <rect x="14" y="16" width="50" height="38" rx="4" fill="#FFFFFF" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M14 26H64" stroke="currentColor" strokeWidth="1.4" />
+      <circle cx="20" cy="21" r="1.5" fill="#111318" />
+      <circle cx="25" cy="21" r="1.5" fill="#F4C400" />
+      {/* Code syntax lines */}
+      <path d="M20 32H38M20 38H48M26 44H42M20 48H32" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M42 32H56" stroke="#F4C400" strokeWidth="1.5" strokeLinecap="round" />
+      {/* Stand 1 */}
+      <path d="M39 54V66M30 66H48" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+
+      {/* Monitor 2 (Right - Vertical terminal / preview) */}
+      <rect x="70" y="10" width="46" height="46" rx="4" fill="#111318" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M70 20H116" stroke="#282A30" strokeWidth="1.4" />
+      <circle cx="76" cy="15" r="1.5" fill="#F4C400" />
+      {/* Terminal prompt lines */}
+      <path d="M76 28L80 32L76 36M84 36H96" stroke="#F4C400" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M76 44H106M76 49H92" stroke="#686868" strokeWidth="1.3" strokeLinecap="round" />
+      {/* Stand 2 */}
+      <path d="M93 56V66M84 66H102" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+
+      {/* Coffee Mug on desk */}
+      <rect x="120" y="58" width="10" height="12" rx="2" fill="#FFFFFF" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M130 61C133 61 134 64 133 67C132 70 130 70 130 70" stroke="currentColor" strokeWidth="1.4" />
+      <path d="M123 54C122 51 124 50 123 48M127 55C126 52 128 51 127 49" stroke="#F4C400" strokeWidth="1.2" strokeLinecap="round" />
+
+      {/* Mechanical Keyboard */}
+      <rect x="36" y="66" width="46" height="5" rx="1.5" fill="#F6F6F2" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+

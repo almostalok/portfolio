@@ -1,14 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
 import { LaptopPerson, GroupPeople, FlaskIllustration, ArrowDoodle } from "../illustrations/IllustrationSystem";
 import { HandUnderline } from "../ui/HandUnderline";
 
+const WITTY_TOOLTIPS: Record<string, string> = {
+  build: "yes, I actually enjoy writing boilerplate at 2am",
+  organize: "I voluntarily manage spreadsheets. Send help.",
+  experiment: "95% of these die. The other 5% become portfolio items.",
+};
+
 export function PhilosophySection() {
   const { philosophy } = portfolioData;
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const items = [
     {
@@ -49,7 +56,9 @@ export function PhilosophySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="flex flex-col items-center text-center p-6 rounded-2xl bg-white border border-transparent hover:border-[#D9D9D4] hover:shadow-sm transition-all duration-300 group"
+              onMouseEnter={() => setHoveredCard(item.key)}
+              onMouseLeave={() => setHoveredCard(null)}
+              className="relative flex flex-col items-center text-center p-6 rounded-2xl bg-white border border-transparent hover:border-[#D9D9D4] hover:shadow-sm transition-all duration-300 group"
             >
               {/* Illustration */}
               <div className="mb-4 h-24 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
@@ -70,6 +79,21 @@ export function PhilosophySection() {
               <p className="text-xs sm:text-sm text-[#686868] leading-relaxed max-w-xs font-normal">
                 {item.description}
               </p>
+
+              {/* Witty tooltip on hover */}
+              {hoveredCard === item.key && (
+                <motion.div
+                  initial={{ opacity: 0, y: 4, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  className="absolute -bottom-9 left-1/2 -translate-x-1/2 px-3.5 py-1.5 bg-white border border-[#111318] rounded-lg shadow-[2px_2px_0px_#111318] whitespace-nowrap z-20"
+                >
+                  {/* Tape strip */}
+                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-6 h-2 bg-[#F4C400] rounded-2xs -rotate-2" />
+                  <span className="font-hand font-bold text-xs sm:text-sm text-[#111318]">
+                    {WITTY_TOOLTIPS[item.key]}
+                  </span>
+                </motion.div>
+              )}
             </motion.div>
 
             {/* Connecting Arrow between items */}

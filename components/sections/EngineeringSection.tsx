@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Info, Check } from "lucide-react";
 import { portfolioData, TechItem } from "@/data/portfolio";
-import { DeveloperWithGraph } from "../illustrations/IllustrationSystem";
 
 export function EngineeringSection() {
   const { engineering } = portfolioData;
@@ -158,10 +158,12 @@ export function EngineeringSection() {
             Hover over any technology node to inspect architectural usage.
           </p>
           <div className="h-16 flex items-end">
-            <img
-              src="/assets/scene_dual_monitors.png"
+            <Image
+              src="/assets/generated/scene_dual_monitors.jpg"
               alt="Developer working at desk"
-              className="h-16 w-auto object-contain"
+              width={160}
+              height={160}
+              className="h-16 w-auto object-contain mix-blend-multiply"
             />
           </div>
         </div>

@@ -96,7 +96,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
             </motion.p>
 
             {/* Handwritten note */}
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 4 }}
               animate={
                 phase >= 2
@@ -104,10 +104,12 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
                   : { opacity: 0, y: 4 }
               }
               transition={{ delay: 0.25, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="font-hand text-base sm:text-lg text-[#686868] -rotate-1 mt-4"
+              className="mt-4 px-3 py-1 bg-[#FFF7D1] border border-[#F4C400]/40 rounded-md -rotate-1 shadow-2xs"
             >
-              turning &ldquo;what if?&rdquo; into &ldquo;it&apos;s live.&rdquo;
-            </motion.p>
+              <span className="font-hand font-bold text-base sm:text-lg text-[#111318]">
+                “ turning &lsquo;what if?&rsquo; into &lsquo;it&apos;s live.&rsquo; ”
+              </span>
+            </motion.div>
           </div>
         </motion.div>
       )}

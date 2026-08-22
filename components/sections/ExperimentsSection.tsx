@@ -79,7 +79,7 @@ export function ExperimentsSection() {
             EXPERIMENTS &amp; SIDE QUESTS
           </h2>
           <span className="font-hand text-lg sm:text-xl text-[#686868]">
-            Because shipping is addictive.
+            Because 2am ideas deserve a chance.
           </span>
         </div>
       </div>
@@ -97,11 +97,36 @@ export function ExperimentsSection() {
             whileHover={{
               rotate: 0,
               y: -8,
+              scale: 1.04,
               transition: { duration: 0.2 },
             }}
             data-cursor="TEST"
-            className="flex flex-col justify-between p-3.5 sm:p-4 rounded-xl bg-white border border-[#D9D9D4] shadow-xs hover:border-[#111318] hover:shadow-md transition-all cursor-pointer min-h-[145px]"
+            className="flex flex-col justify-between p-3.5 sm:p-4 rounded-xl bg-white border border-[#D9D9D4] shadow-xs hover:border-[#111318] hover:shadow-md transition-all cursor-pointer min-h-[145px] relative"
           >
+            {/* Status badge */}
+            <div className="absolute -top-2 -right-2 z-10">
+              <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-mono font-bold border shadow-sm ${
+                item.status === "Live"
+                  ? "bg-[#E8FFE8] border-[#27C93F] text-[#1A7A2E]"
+                  : item.status === "Beta"
+                  ? "bg-[#FFF7D1] border-[#F4C400] text-[#111318]"
+                  : item.status === "Prototype"
+                  ? "bg-[#F0F0FF] border-[#8B8BFF] text-[#4A4A9E]"
+                  : item.status === "Shipped"
+                  ? "bg-[#F6F6F2] border-[#111318] text-[#111318]"
+                  : "bg-[#F6F6F2] border-[#D9D9D4] text-[#686868]"
+              }`}>
+                <span className={`w-1.5 h-1.5 rounded-full ${
+                  item.status === "Live"
+                    ? "bg-[#27C93F] animate-pulse-dot"
+                    : item.status === "Beta"
+                    ? "bg-[#F4C400] animate-pulse-dot"
+                    : "bg-[#686868]"
+                }`} />
+                {item.status}
+              </span>
+            </div>
+
             {/* Top Browser Dots */}
             <div>
               <div className="flex items-center gap-1 mb-3">

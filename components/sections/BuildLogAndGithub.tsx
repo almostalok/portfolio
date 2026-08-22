@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Flag } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
-import { WalkingPerson } from "../illustrations/IllustrationSystem";
 
 export function BuildLogAndGithub() {
   const { buildLog, github } = portfolioData;
@@ -73,10 +73,12 @@ export function BuildLogAndGithub() {
             <div className="relative pt-6 pb-4">
               {/* Walking Person Image Asset */}
               <div className="flex items-center mb-2">
-                <img
-                  src="/assets/alok_walking_backpack.png"
+                <Image
+                  src="/assets/generated/alok_walking_backpack.jpg"
                   alt="Alok walking"
-                  className="h-16 w-auto object-contain animate-float-gentle"
+                  width={90}
+                  height={90}
+                  className="h-16 w-16 object-contain animate-float-gentle mix-blend-multiply"
                 />
               </div>
 

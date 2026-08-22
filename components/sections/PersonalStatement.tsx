@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { PersonWithLaptopAndPlane } from "../illustrations/IllustrationSystem";
 import { HandUnderline } from "../ui/HandUnderline";
 
 export function PersonalStatement() {
@@ -42,10 +42,12 @@ export function PersonalStatement() {
           {/* Right Illustration: Developer Flying on Paper Plane */}
           <div className="md:col-span-4 flex justify-center md:justify-end">
             <div className="animate-float-slow">
-              <img
-                src="/assets/scene_flying_paper_plane.png"
-                alt="Flying on paper plane"
-                className="w-36 sm:w-48 h-auto object-contain"
+              <Image
+                src="/assets/generated/scene_flying_paper_plane.jpg"
+                alt="Developer flying on paper plane"
+                width={320}
+                height={320}
+                className="w-40 sm:w-52 h-auto object-contain mix-blend-multiply"
               />
             </div>
           </div>
