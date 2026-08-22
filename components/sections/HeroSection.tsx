@@ -97,11 +97,14 @@ export function HeroSection() {
             {/* Background oversized organic off-white circle */}
             <div className="relative w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 flex items-center justify-center">
               {/* Organic blob background */}
-              <div
-                className="absolute inset-0 bg-[#F6F6F2] rounded-full border border-[#E8E8E2] -z-10 shadow-[0_12px_40px_rgba(0,0,0,0.03)]"
-                style={{
-                  borderRadius: "52% 48% 60% 40% / 46% 54% 46% 54%",
-                }}
+              <Image
+                src="/assets/hero_blob.svg"
+                alt=""
+                width={520}
+                height={580}
+                unoptimized
+                className="absolute inset-0 w-full h-full object-contain -z-10 scale-110"
+                aria-hidden="true"
               />
 
               {/* Real Avatar with subtle idle floating motion */}
@@ -127,66 +130,7 @@ export function HeroSection() {
                 />
               </motion.div>
 
-              {/* Top Left: Bird & 'experimenting' Asset */}
-              <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                className="absolute -top-4 -left-6 sm:-left-12 flex flex-col items-center pointer-events-none"
-              >
-                <div className="animate-float-slow mb-1">
-                  <Bird className="w-7 h-6 text-[#111318]" yellowStroke />
-                </div>
-                <Image
-                  src="/assets/annot_experimenting.png"
-                  alt="experimenting"
-                  width={140}
-                  height={60}
-                  unoptimized
-                  className="w-24 sm:w-28 h-auto object-contain -rotate-6"
-                />
-              </motion.div>
 
-              {/* Top Right: Multi-Annotation Handwritten Cluster */}
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                className="absolute -top-6 -right-6 sm:-right-14 flex flex-col items-start gap-1 select-none pointer-events-none"
-              >
-                <Image
-                  src="/assets/annot_building.png"
-                  alt="building"
-                  width={120}
-                  height={50}
-                  unoptimized
-                  className="w-20 sm:w-24 h-auto object-contain"
-                />
-                <Image
-                  src="/assets/annot_shipping.png"
-                  alt="shipping"
-                  width={100}
-                  height={45}
-                  unoptimized
-                  className="w-16 sm:w-20 h-auto object-contain pl-3"
-                />
-                <Image
-                  src="/assets/annot_organizing.png"
-                  alt="organizing"
-                  width={110}
-                  height={45}
-                  unoptimized
-                  className="w-18 sm:w-22 h-auto object-contain pl-3"
-                />
-                <Image
-                  src="/assets/annot_debugging.png"
-                  alt="probably debugging"
-                  width={130}
-                  height={50}
-                  unoptimized
-                  className="w-22 sm:w-28 h-auto object-contain pl-3"
-                />
-              </motion.div>
 
               {/* Bottom Left: Little Tree & Grass Doodle */}
               <div className="absolute -bottom-4 -left-4 flex items-end gap-1 pointer-events-none">
